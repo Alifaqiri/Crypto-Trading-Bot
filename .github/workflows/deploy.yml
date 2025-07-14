@@ -1,17 +1,12 @@
-name: Deploy to Railway
+# این فایل موقتاً غیرفعال شده تا از خطای اجرا جلوگیری شود.
+name: 🔧 Disabled Deployment
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
-  deploy:
+  noop:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Deploy to Railway
-        uses: railwayapp/cli-action@v1
-        with:
-          railwayToken: ${{ secrets.RAILWAY_TOKEN }}
+      - name: No operation
+        run: echo "Deployment temporarily disabled"
